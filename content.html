@@ -1,0 +1,80 @@
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Platform</title>
+   <link rel="stylesheet" href="style.css">
+   <script src="soul.js"></script>
+</head>
+<body>
+    <div class="container">
+        
+        <!-- HOME SCREEN -->
+        <div class="screen active" id="home-screen">
+            <div class="home-screen">
+                <h1>🎯 Quiz Platform</h1>
+                <p>Test your knowledge with our interactive quiz!</p>
+                <p>Answer 5 questions and see your score.</p>
+                <button class="btn" id="start-btn">Start Quiz</button>
+            </div>
+        </div>
+
+        <!-- QUIZ SCREEN -->
+        <div class="screen" id="quiz-screen">
+            <div class="quiz-header">
+                <div class="question-counter" id="question-counter">Question 1 of 5</div>
+            </div>
+            
+            <div class="question-text" id="question-text">
+                <!-- Question will appear here -->
+            </div>
+            
+            <div class="options-container" id="options-container">
+                <!-- Options will appear here -->
+            </div>
+            
+            <button class="btn" id="next-btn" disabled>Next Question</button>
+        </div>
+
+        <!-- RESULT SCREEN -->
+        <div class="screen" id="result-screen">
+            <div class="result-screen">
+                <h2>🎉 Quiz Completed!</h2>
+                
+                <div class="score-display">
+                    <div class="score-number" id="score-number">0</div>
+                    <div class="score-label">Your Score</div>
+                </div>
+                
+                <div class="result-details">
+                    <div class="result-item">
+                        <span class="result-label">Total Questions:</span>
+                        <span class="result-value" id="total-questions">5</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-label">Correct Answers:</span>
+                        <span class="result-value" id="correct-answers">0</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-label">Wrong Answers:</span>
+                        <span class="result-value" id="wrong-answers">0</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-label">Percentage:</span>
+                        <span class="result-value" id="percentage">0%</span>
+                    </div>
+                </div>
+                
+                <button class="btn" id="restart-btn">Restart Quiz</button>
+            </div>
+        </div>
+
+    </div>
+
+  
+</body>
+</html>
+</body>
+</html>
