@@ -1,16 +1,17 @@
-
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz Platform</title>
-   <link rel="stylesheet" href="style.css">
-   <script src="script.js"></script>
+
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <div class="container">
-        
+
         <!-- HOME SCREEN -->
         <div class="screen active" id="home-screen">
             <div class="home-screen">
@@ -24,30 +25,30 @@
         <!-- QUIZ SCREEN -->
         <div class="screen" id="quiz-screen">
             <div class="quiz-header">
-                <div class="question-counter" id="question-counter">Question 1 of 5</div>
+                <div class="question-counter" id="question-counter">
+                    Question 1 of 5
+                </div>
             </div>
-            
-            <div class="question-text" id="question-text">
-                <!-- Question will appear here -->
-            </div>
-            
-            <div class="options-container" id="options-container">
-                <!-- Options will appear here -->
-            </div>
-            
-            <button class="btn" id="next-btn" disabled>Next Question</button>
+
+            <div class="question-text" id="question-text"></div>
+
+            <div class="options-container" id="options-container"></div>
+
+            <button class="btn" id="next-btn" disabled>
+                Next Question
+            </button>
         </div>
 
         <!-- RESULT SCREEN -->
         <div class="screen" id="result-screen">
             <div class="result-screen">
                 <h2>🎉 Quiz Completed!</h2>
-                
+
                 <div class="score-display">
                     <div class="score-number" id="score-number">0</div>
                     <div class="score-label">Your Score</div>
                 </div>
-                
+
                 <div class="result-details">
                     <div class="result-item">
                         <span class="result-label">Total Questions:</span>
@@ -66,15 +67,15 @@
                         <span class="result-value" id="percentage">0%</span>
                     </div>
                 </div>
-                
+
                 <button class="btn" id="restart-btn">Restart Quiz</button>
             </div>
         </div>
 
     </div>
 
-  
+    <!-- Link JavaScript -->
+    <script src="script.js"></script>
 </body>
 </html>
-</body>
-</html>
+
