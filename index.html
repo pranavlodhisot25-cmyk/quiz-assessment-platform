@@ -1,48 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz Platform</title>
-
-    <!-- Link CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <div class="container">
 
-        <!-- HOME SCREEN -->
-        <div class="screen active" id="home-screen">
-            <div class="home-screen">
+        <div class="screen active" id="landing-screen">
+            <div class="landing-screen">
                 <h1>🎯 Quiz Platform</h1>
-                <p>Test your knowledge with our interactive quiz!</p>
-                <p>Answer 5 questions and see your score.</p>
-                <button class="btn" id="start-btn">Start Quiz</button>
+                <p class="subtitle">Please fill in your details to begin</p>
+
+                <div class="form-container">
+                    <form id="registration-form">
+
+                        <div class="form-group" id="name-group">
+                            <label for="participant-name">Full Name *</label>
+                            <input type="text" id="participant-name" placeholder="Enter your full name" required>
+                            <span class="error-message">Please enter your name</span>
+                        </div>
+
+                        <div class="form-group" id="email-group">
+                            <label for="participant-email">Email Address *</label>
+                            <input type="email" id="participant-email" placeholder="example@email.com" required>
+                            <span class="error-message">Please enter a valid email</span>
+                        </div>
+
+                        <div class="form-group" id="phone-group">
+                            <label for="participant-phone">Phone Number *</label>
+                            <input type="tel" id="participant-phone" placeholder="Enter your phone number" required>
+                            <span class="error-message">Please enter a valid phone number</span>
+                        </div>
+
+                        <div class="form-group" id="age-group">
+                            <label for="participant-age">Age/Class *</label>
+                            <input type="text" id="participant-age" placeholder="e.g., 18 or Class 12" required>
+                            <span class="error-message">Please enter your age or class</span>
+                        </div>
+
+                        <button type="submit" class="btn">Proceed to Quiz</button>
+
+                    </form>
+                </div>
             </div>
         </div>
 
-        <!-- QUIZ SCREEN -->
+        <div class="screen" id="home-screen">
+            <div class="home-screen">
+                <h1>🎯 Quiz Platform</h1>
+                <p class="welcome-name">Welcome, <span id="display-name"></span>!</p>
+
+                <div class="participant-info">
+                    <div class="info-item">
+                        <span class="info-label">Name:</span>
+                        <span class="info-value" id="info-name"></span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Email:</span>
+                        <span class="info-value" id="info-email"></span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Phone:</span>
+                        <span class="info-value" id="info-phone"></span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Age/Class:</span>
+                        <span class="info-value" id="info-age"></span>
+                    </div>
+                </div>
+
+                <p>Test your knowledge with our interactive quiz!</p>
+                <p>Answer 5 questions and see your score.</p>
+
+                <button class="btn" id="start-btn">Start Quiz</button>
+                <button class="btn btn-secondary" id="change-details-btn">Change Details</button>
+            </div>
+        </div>
+
         <div class="screen" id="quiz-screen">
             <div class="quiz-header">
-                <div class="question-counter" id="question-counter">
-                    Question 1 of 5
-                </div>
+                <div class="question-counter" id="question-counter">Question 1 of 5</div>
+                <div class="participant-name" id="quiz-participant-name"></div>
             </div>
 
             <div class="question-text" id="question-text"></div>
-
             <div class="options-container" id="options-container"></div>
 
-            <button class="btn" id="next-btn" disabled>
-                Next Question
-            </button>
+            <button class="btn" id="next-btn" disabled>Next Question</button>
         </div>
 
-        <!-- RESULT SCREEN -->
         <div class="screen" id="result-screen">
             <div class="result-screen">
                 <h2>🎉 Quiz Completed!</h2>
+
+                <div class="result-participant-info">
+                    <div class="info-item">
+                        <span class="info-label">Participant:</span>
+                        <span class="info-value" id="result-name"></span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Email:</span>
+                        <span class="info-value" id="result-email"></span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Phone:</span>
+                        <span class="info-value" id="result-phone"></span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Age/Class:</span>
+                        <span class="info-value" id="result-age"></span>
+                    </div>
+                </div>
 
                 <div class="score-display">
                     <div class="score-number" id="score-number">0</div>
@@ -68,14 +142,13 @@
                     </div>
                 </div>
 
-                <button class="btn" id="restart-btn">Restart Quiz</button>
+                <button class="btn" id="restart-btn">Take Quiz Again</button>
             </div>
         </div>
 
     </div>
 
-    <!-- Link JavaScript -->
     <script src="script.js"></script>
 </body>
-</html>
 
+</html>
